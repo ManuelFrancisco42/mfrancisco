@@ -1,0 +1,233 @@
+/* 
+===========
+Home Section
+===========
+*/
+#home {
+    // Home Section A
+    &-a {
+      .specials {
+        margin-top: 3rem;
+        display: grid;
+        grid-gap: 1rem;
+        grid-template-columns: repeat(4, 1fr);
+  
+        .fas {
+          color: var(--main-color);
+          padding-bottom: 0.4rem;
+        }
+      }
+    }
+  
+    // Home Section B
+    &-b {
+      .stats {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        gap: 2rem;
+        margin: 0 5rem;
+  
+        li {
+          line-height: 2;
+  
+          &.stats-title {
+            font-size: 1.5rem;
+            color: #000;
+            &:nth-child(even) {
+              color: #fff;
+            }
+          }
+  
+          &.stats-number {
+            font-size: 2rem;
+            font-weight: bold;
+          }
+        }
+  
+        div {
+          padding: 3rem 0;
+  
+          &:nth-child(odd) {
+            background: var(--tertiary-color);
+            margin-top: 1rem;
+          }
+          &:nth-child(even) {
+            background: var(--primary-color);
+            color: #fff;
+            margin-top: 1rem;
+          }
+        }
+      }
+      .formation-objective {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        border-radius: 55px 0 50px 0;
+        margin: 25px;
+        box-shadow: 5px 10px 2px rgba(136, 136, 136, 0.048);
+      }
+    }
+  
+    // Home Section C
+    &-c {
+      .process {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 1.5rem;
+        text-align: center;
+        color: #fff;
+  
+        &-step {
+          position: absolute;
+          top: 0;
+          right: 0;
+          font-size: 28px;
+          background: #ba265d;
+          color: #fff;
+          border-radius: 50%;
+          height: 15px;
+          width: 15px;
+          line-height: 15px;
+          padding: 1rem;
+          transition: width 2s, height 2s, transform 2s;
+        }
+        // process-icon
+        &-icon {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          justify-content: center;
+          border-radius: 50%;
+          background: var(--primary-color);
+          color: #fff;
+          padding: 2rem;
+          width: 70px;
+          height: 70px;
+          line-height: 70px;
+          text-align: center;
+          position: relative;
+          transition: all 1s;
+          margin-left: 5rem;
+          cursor: pointer;
+          z-index: 1;
+  
+          &:hover {
+            background: var(--tertiary-color);
+            width: 90px;
+            height: 90px;
+            line-height: 90px;
+            transform: rotate(360deg);
+            border-radius: 0%;
+            .process-step {
+              background: #0b0b13;
+              color: #ba265d;
+            }
+          }
+        }
+      }
+    }
+  }
+  #home-c .container h2 {
+    color: #fff;
+  }
+  /* 
+  ===============
+  Media Queries
+  ===============
+  */
+  
+  @media (max-width: 1024px) {
+    #home-a {
+      padding: 0;
+    }
+    .specials h2 {
+      white-space: nowrap;
+      font-size: 0.9rem;
+    }
+  
+    #home-b .stats {
+      gap: 0rem;
+      margin: 0;
+    }
+  }
+  
+  /* Max-width: 768px */
+  @media (max-width: 768px) {
+    #home-a .specials {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  
+    #home-a .card-info p,
+    #home-c p {
+      text-align: justify;
+      font-size: 1.2rem;
+      line-height: 1;
+      // color: #fa0404;
+    }
+  
+    #home-b .stats {
+      grid-template-columns: 1fr;
+    }
+  
+    #home-c .process {
+      grid-template-columns: repeat(2, 1fr);
+    }
+  }
+  
+  /* Max-width: 375px */
+  @media (max-width: 375px) {
+    #home-a .container {
+      margin-top: -80px;
+    }
+  
+    #home-a .specials {
+      grid-template-columns: 1fr;
+    }
+  
+    .nav .container {
+      flex-direction: column;
+      margin-right: 0;
+    }
+  
+    #logo p:last-child {
+      margin-left: 2.4rem;
+    }
+  
+    #home-a .my-4,
+    #home-b .container,
+    #home-c .container {
+      margin-top: -80px;
+    }
+  
+    #home-b .stats,
+    #home-c .process {
+      grid-template-columns: 1fr;
+      margin: 0;
+    }
+  
+    #home-b .formation-objective {
+      border-radius: 0;
+      margin: 0;
+    }
+  
+    #home-a .lead,
+    #home-c .lead {
+      font-size: 1rem;
+      margin-bottom: 2rem;
+      text-align: justify;
+    }
+  
+    #home-a .card-info h3,
+    #home-a .card-info p,
+    #home-a .process div p {
+      text-align: justify;
+      font-size: 1rem;
+    }
+  
+    #home-a .section-title {
+      margin-top: 2rem;
+      font-size: 1rem;
+    }
+  }
+  

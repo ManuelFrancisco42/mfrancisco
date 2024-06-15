@@ -1,7 +1,7 @@
 {
   "name": "mfrancisco",
   "version": "0.1.0",
-   "homepage": "https://ManuelFrancisco42.github.io/mfrancisco",
+  "homepage": "https://manuelfrancisco42.github.io/mfrancisco",
   "private": true,
   "dependencies": {
     "@testing-library/jest-dom": "^5.17.0",
@@ -9,7 +9,8 @@
     "@testing-library/user-event": "^13.5.0",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "react-scripts": "5.0.1",
+    "react-router-dom": "^6.23.1",
+    "react-scripts": "^5.0.1",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -39,6 +40,19 @@
     ]
   },
   "devDependencies": {
-    "gh-pages": "^6.1.1"
+    "@babel/core": "^7.24.7",
+    "@babel/preset-env": "^7.24.7",
+    "@babel/preset-react": "^7.24.7",
+    "gh-pages": "^6.1.1",
+    "gulp": "^5.0.0",
+    "gulp-autoprefixer": "^9.0.0",
+    "gulp-babel": "^8.0.0",
+    "gulp-clean-css": "^4.3.0",
+    "gulp-imagemin": "^9.1.0",
+    "gulp-purgecss": "^6.0.0",
+    "gulp-sass": "^5.1.0",
+    "gulp-sourcemaps": "^3.0.0",
+    "gulp-uglify": "^3.0.2",
+    "sass": "^1.77.5"
   }
 }

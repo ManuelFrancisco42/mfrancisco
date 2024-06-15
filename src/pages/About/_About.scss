@@ -1,0 +1,401 @@
+/* 
+===========
+About Section
+===========
+*/
+#about {
+    // About A
+    &-a {
+      .about-info {
+        display: grid;
+        grid-template-areas:
+          "bio bio bio"
+          "bio-2 bio-2 bio-2"
+          "aw1 aw2 aw3";
+        grid-gap: 1.2rem;
+      }
+  
+      .bio {
+        grid-area: bio;
+        border-left: 20px solid var(--tertiary-color);
+        padding: 0.8rem;
+      }
+  
+      .bio-2 {
+        grid-area: bio-2;
+        border-right: 20px solid var(--secondary-color);
+        padding: 0.8rem;
+      }
+  
+      .award-1 {
+        grid-area: aw1;
+      }
+  
+      .award-2 {
+        grid-area: aw2;
+      }
+  
+      .award-3 {
+        grid-area: aw3;
+      }
+  
+      .award-1 .fas,
+      .award-2 .fas,
+      .award-3 .fas {
+        color: var(--main-color);
+        margin: 1rem;
+      }
+    }
+    // About B
+    &-b {
+      background-color: var(--white);
+      .container {
+        max-width: 84.375rem;
+      }
+      .progress {
+        overflow: hidden;
+        height: 20px;
+        background: var(--medium-color);
+        border-radius: 5px;
+        margin-bottom: 0.6rem;
+  
+        div {
+          height: 100%;
+          color: #fff;
+          text-align: center;
+          background: var(--main-color);
+        }
+      }
+    }
+    // About C
+    &-c {
+      .about-logos {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-gap: 2rem;
+  
+        img {
+          width: 70%;
+        }
+      }
+    }
+    // About D
+    &-d {
+      .engagements {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 0.5rem;
+        height: 200px;
+  
+        ul {
+          list-style: none;
+          margin-top: 1rem;
+          display: flex;
+          align-items: center;
+        }
+  
+        h4 {
+          color: #fff;
+        }
+  
+        p {
+          border: 1px solid var(--medium-color);
+          border-radius: 5px;
+          padding: 0.5rem;
+          color: #fff;
+        }
+        .section-title {
+          color: #fff;
+        }
+        img {
+          width: 50px;
+          height: 50px;
+          border-radius: 50%;
+          margin-right: 0.5rem;
+        }
+      }
+    }
+  }
+  #about-d .section-title {
+    color: #fff;
+  }
+  
+  /*
+  ================= 
+  About- engagements-card ------------------------------------------
+  =================
+  */
+  .engagements-card {
+    background: #10101a;
+  }
+  
+  .card {
+    height: 20rem;
+    position: relative;
+    perspective: 1000px;
+    z-index: 1;
+  
+    &-side {
+      transition: all 2s linear;
+      backface-visibility: hidden;
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      border-radius: 0.9375rem;
+      transform: translate3d(0, 0, 0);
+      visibility: visible;
+    }
+  
+    &-front {
+      background: #fff;
+  
+      img {
+        height: 13rem;
+        object-fit: cover;
+        border-top-left-radius: 0.9375rem;
+        border-top-right-radius: 0.9375rem;
+      }
+    }
+  
+    &-back {
+      background: #ba265d;
+      transform: rotateY(180deg);
+      display: grid;
+      place-items: center;
+    }
+  
+    &:hover {
+      .card-front {
+        transform: rotateY(-180deg);
+      }
+  
+      .card-back {
+        transform: rotateY(0);
+      }
+    }
+  
+    &-info {
+      padding: 1rem 1.5rem;
+    }
+  
+    &-footer {
+      display: grid;
+      grid-template-columns: auto 1fr;
+      align-items: center;
+  
+      img {
+        width: 5rem;
+        height: 5rem;
+        margin-top: 0.8rem;
+        object-fit: cover;
+        border-radius: 50%;
+      }
+    }
+  }
+  
+  .engagements-card-center {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(330px, 1fr));
+    gap: 3rem;
+    align-items: center;
+  }
+  
+  /* 
+  ===================
+  Media Queries 
+  ===================
+  */
+  @media (max-width: 1024px) {
+    #about-b .box-skills {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 0.6rem;
+      white-space: nowrap;
+    }
+  
+    #about-b .box-skills .skill {
+      font-size: 0.8rem;
+      max-width: 300px;
+      min-width: 300px;
+      width: calc((100% - 40px) / 3);
+    }
+  
+    .flex-center {
+      gap: 1rem;
+    }
+    #about-b .text-white h4 {
+      font-size: 0.6rem;
+    }
+  }
+  @media (max-width: 768px) {
+    #about-a,
+    #about-d {
+      margin-bottom: 0;
+      margin-top: 0;
+      padding-top: 0;
+      padding-bottom: 0;
+    }
+  
+    #about-a .section-title {
+      margin-top: 3rem;
+    }
+  
+    #about-b {
+      margin-bottom: 0;
+      margin-top: 0;
+    }
+    #about-b .box-skills {
+      grid-template-columns: 1fr;
+      margin: 0 auto;
+    }
+    .icon-skills-css-1 {
+      margin-bottom: 0;
+    }
+    .skill {
+      width: 320px;
+    }
+  
+    #about-b .text-white h4 {
+      font-size: 12px;
+    }
+  
+    #about-d p {
+      text-align: justify;
+      word-spacing: -0.1rem;
+      letter-spacing: -0.03rem;
+    }
+  
+    .engagement-item h4 {
+      white-space: nowrap;
+    }
+  
+    #about-d .engagement-item p {
+      text-align: justify;
+      word-spacing: 0.1rem;
+      letter-spacing: -0.08rem;
+      line-height: 1.2;
+    }
+    .bio p {
+      text-align: justify;
+    }
+    .bio-2 p {
+      text-align: justify;
+    }
+    .award-1 p {
+      text-align: justify;
+    }
+  
+    .award-2 p {
+      text-align: justify;
+    }
+  
+    .award-1 h3,
+    .award-2 h3,
+    .award-3 h3 {
+      font-size: 12px;
+      text-align: justify;
+    }
+  
+    .award-3 p {
+      text-align: justify;
+      word-spacing: 0.5rem;
+      letter-spacing: -0.08rem;
+    }
+  }
+  
+  @media (max-width: 375px) {
+    #about-a .container {
+      margin-top: 50px;
+    }
+    #about-a .bio,
+    #about-a .bio-2 {
+      text-align: justify;
+    }
+    #about-a .about-info {
+      grid-template-areas:
+        "bio"
+        "bio-2"
+        "aw1"
+        "aw2"
+        "aw3";
+    }
+  
+    #about-b .box-skills {
+      grid-template-columns: 1fr;
+      justify-content: center;
+    }
+    #about-b ul {
+      padding-left: 15px;
+      font-size: 0.9rem;
+      padding-bottom: 15px;
+      gap: 1rem;
+    }
+  
+    #about-b .text-white h3 {
+      padding-left: 15px;
+    }
+  
+    #about-b .text-white h4 {
+      font-size: 10px;
+      padding-left: 15px;
+    }
+    #about-b .skill-image img {
+      padding: 9px;
+      width: 30px;
+      height: 30px;
+      margin-top: 2rem;
+      margin-left: 0.8rem;
+    }
+    .box-skills .skill {
+      padding: 0;
+      width: 323px;
+      border-radius: 0;
+  
+      margin-left: 0.8rem;
+    }
+    #about-b .icon-skils-css-1 {
+      margin-right: 2rem;
+      gap: 2rem;
+    }
+    .box-skills .skill:last-of-type {
+      /* padding-left: 5rem; */
+  
+      .flex-center {
+        margin-right: 2rem;
+        margin-bottom: 0;
+        padding-right: 0.5rem;
+      }
+    }
+    #about-d .engagements {
+      margin-bottom: 20rem;
+      grid-template-columns: 1fr;
+    }
+    #about-d .engagement-item {
+      margin-bottom: 1rem;
+      border: none;
+      border-radius: 0;
+      border-top: 1px solid var(--secondary-color);
+    }
+  
+    #about-b .lead {
+      text-align: center;
+    }
+    #about-b .section-title,
+    #about-d .section-title {
+      margin-top: 0rem;
+    }
+  
+    .award-1 p,
+    .award-2,
+    .award-3 p,
+    #about-d p {
+      text-align: justify;
+    }
+  
+    #main-footer .footer-content {
+      flex-direction: column;
+    }
+  }
+  
