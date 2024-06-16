@@ -10,7 +10,7 @@ const FooterComponent = () => {
           <i class="fab fa-twitter"></i>
           <span class="sr-only">Twitter</span>
         </a>
-        <a href="https://www.facebook.com/Mfrancisco" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+        <a href="https://www.facebook.com/Mfranciscodev" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
           <i class="fab fa-facebook"></i>
           <span class="sr-only">Facebook</span>
         </a>
