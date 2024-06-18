@@ -31,8 +31,8 @@ const Header = () => {
       <nav className={`nav ${isActive ? 'active' : ''}`}>
         <div className="container">
           <div id="logo" className="brand">
-            <h1 className="logo"><Link to="/">Portfolio</Link></h1>
-            <p className="mr-2">Manuel Francisco</p>
+            <h1 className="logo font-handwriten"><Link to="/">Portfolio</Link></h1>
+            <p className="mr-2 font-handwriten">Manuel Francisco</p>
           </div>
           <ul>
             <li>

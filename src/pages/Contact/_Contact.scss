@@ -82,6 +82,7 @@ Contact Section
     padding: 1rem;
     border: 1px solid var(--tertiary-color);
     border-radius: 0.2rem;
+    
   }
   
   .text-input.message-input {
@@ -191,6 +192,9 @@ Contact Section
     }
     #main-footer .footer-content {
       flex-direction: column;
+    }
+    form {
+      margin-left: 0rem;
     }
   }
   

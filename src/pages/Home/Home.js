@@ -5,7 +5,7 @@ const Home = () => {
   return (
     <div>
       <HomeSection />
-      <p>Debug: Home component rendered.</p>
+
     </div>
   );
 };
